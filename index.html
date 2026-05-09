@@ -884,13 +884,14 @@
     }
 
     .cover-tile {
-      display: block;
+      display: flex;
+      flex-direction: column;
       position: relative;
       min-width: 0;
       border-radius: 20px;
       overflow: hidden;
       border: 1px solid var(--line);
-      background: rgba(2, 6, 23, 0.45);
+      background: rgba(2, 6, 23, 0.72);
       box-shadow: 0 16px 45px rgba(0,0,0,0.26);
       transform: translateY(0);
       transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -912,23 +913,23 @@
     }
 
     .cover-tile span {
-      position: absolute;
-      left: 0.55rem;
-      right: 0.55rem;
-      bottom: 0.55rem;
-      display: block;
-      padding: 0.42rem 0.5rem;
-      border-radius: 12px;
-      background: rgba(2, 6, 23, 0.78);
+      position: static;
+      display: flex;
+      align-items: center;
+      min-height: 3.15rem;
+      padding: 0.62rem 0.72rem 0.7rem;
+      border-top: 1px solid rgba(125, 211, 252, 0.16);
+      background: rgba(2, 6, 23, 0.92);
       color: #eef6ff;
-      font-size: 0.72rem;
+      font-size: 0.78rem;
       font-weight: 900;
-      line-height: 1.08;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
+      line-height: 1.12;
+      text-shadow: none;
+      backdrop-filter: none;
     }
 
-    body.light-mode .cover-tile { background: rgba(255,255,255,0.7); }
+    body.light-mode .cover-tile { background: rgba(255,255,255,0.88); }
+    body.light-mode .cover-tile span { background: rgba(255,255,255,0.94); color: #08111f; }
 
     .cover-link {
       display: block;
@@ -998,11 +999,12 @@
         flex: 0 0 42%;
         scroll-snap-align: start;
       }
-      .cover-tile span { font-size: 0.68rem; }
+      .cover-tile span { font-size: 0.72rem; min-height: 3.4rem; }
     }
 </style>
 </head>
-<body>
+<body><!-- Cover filenames matched to ebook titles. Updated cover links use exact uploaded PNG names. -->
+
 <a class="skip-link" href="#library">Skip to ebook library</a>
 <header class="site-header" id="top">
 <div aria-label="Main navigation" class="shell nav">
@@ -1056,7 +1058,7 @@
 </aside>
 </div>
 </section>
-<section aria-labelledby="covers-title" class="cover-shelf" id="covers"><div class="shell"><div class="section-head"><div><h2 id="covers-title">Featured covers</h2><p>Tap a cover to open the matching Cornelius Aurelius ebook.</p></div><a class="pill-link" href="#library">Browse all ebooks</a></div><div class="cover-gallery"><a aria-label="Open Colour Blindness in Football" class="cover-tile" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/" rel="noopener" target="_blank"><img alt="Colour Blindness in Football ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="3.png"/><span>Colour Blindness in Football</span></a><a aria-label="Open Proof Is King" class="cover-tile" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/" rel="noopener" target="_blank"><img alt="Proof Is King ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ebook covers.png"/><span>Proof Is King</span></a><a aria-label="Open The Flow State Footballer" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top" rel="noopener" target="_blank"><img alt="The Flow State Footballer ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="1.png"/><span>The Flow State Footballer</span></a><a aria-label="Open Why Do I Pick the Wrong Men?" class="cover-tile" href="https://cornelius-aurelius.github.io/Why-Do-I-Pick-the-Wrong-Men_-Written-by-an-Attractive-Narcissist/" rel="noopener" target="_blank"><img alt="Why Do I Pick the Wrong Men? ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="6.png"/><span>Why Do I Pick the Wrong Men?</span></a><a aria-label="Open Why You Keep Choosing the Wrong People" class="cover-tile" href="https://cornelius-aurelius.github.io/WHY-YOU-KEEP-CHOOSING-THE-WRONG-PEOPLE/" rel="noopener" target="_blank"><img alt="Why You Keep Choosing the Wrong People ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_29 PM.png"/><span>Why You Keep Choosing the Wrong People</span></a><a aria-label="Open The Imagination Book" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-IMAGINATION-BOOK/" rel="noopener" target="_blank"><img alt="The Imagination Book ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ebook covers (1).png"/><span>The Imagination Book</span></a><a aria-label="Open The Continuation Code" class="cover-tile" href="https://cornelius-aurelius.github.io/The-Continuation-Code/" rel="noopener" target="_blank"><img alt="The Continuation Code ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_32 PM.png"/><span>The Continuation Code</span></a><a aria-label="Open Hard to Replace" class="cover-tile" href="https://cornelius-aurelius.github.io/HARD-TO-REPLACE-How-to-Stay-Valuable-Multiply-Your-Output-and-Win-in-the-Age-of-AI/#top" rel="noopener" target="_blank"><img alt="Hard to Replace ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="4.png"/><span>Hard to Replace</span></a><a aria-label="Open Just Get Skills" class="cover-tile" href="https://cornelius-aurelius.github.io/JUST-GET-SKILLS-EBOOK/#top" rel="noopener" target="_blank"><img alt="Just Get Skills ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="2.png"/><span>Just Get Skills</span></a><a aria-label="Open Rich Yin Poor Yang" class="cover-tile" href="https://cornelius-aurelius.github.io/RICH-YIN-POOR-YANG-EBOOK/#top" rel="noopener" target="_blank"><img alt="Rich Yin Poor Yang ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="5.png"/><span>Rich Yin Poor Yang</span></a><a aria-label="Open The Invisible Tax" class="cover-tile" href="https://cornelius-aurelius.github.io/The-Invisible-Tax-Ebook/#top" rel="noopener" target="_blank"><img alt="The Invisible Tax ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_49_17 PM.png"/><span>The Invisible Tax</span></a><a aria-label="Open Zero to One" class="cover-tile" href="https://cornelius-aurelius.github.io/ZERO-TO-ONE-EBOOK/#top" rel="noopener" target="_blank"><img alt="Zero to One ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_36 PM.png"/><span>Zero to One</span></a><a aria-label="Open The Identity Paradox" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-IDENTITY-PARADOX-EBOOK/#top" rel="noopener" target="_blank"><img alt="The Identity Paradox ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_40 PM.png"/><span>The Identity Paradox</span></a></div></div></section><section aria-labelledby="library-title" id="library">
+<section aria-labelledby="covers-title" class="cover-shelf" id="covers"><div class="shell"><div class="section-head"><div><h2 id="covers-title">Featured covers</h2><p>Tap a cover to open the matching Cornelius Aurelius ebook.</p></div><a class="pill-link" href="#library">Browse all ebooks</a></div><div class="cover-gallery"><a aria-label="Open Colour Blindness in Football" class="cover-tile" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/" rel="noopener" target="_blank"><img alt="Colour Blindness in Football ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="3.png"/><span>Colour Blindness in Football</span></a><a aria-label="Open Proof Is King" class="cover-tile" href="https://cornelius-aurelius.github.io/PROOF-IS-KING-EBOOK/" rel="noopener" target="_blank"><img alt="Proof Is King ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ebook covers.png"/><span>Proof Is King</span></a><a aria-label="Open The Flow State Footballer" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top" rel="noopener" target="_blank"><img alt="The Flow State Footballer ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="1.png"/><span>The Flow State Footballer</span></a><a aria-label="Open Why Do I Pick the Wrong Men?" class="cover-tile" href="https://cornelius-aurelius.github.io/Why-Do-I-Pick-the-Wrong-Men_-Written-by-an-Attractive-Narcissist/" rel="noopener" target="_blank"><img alt="Why Do I Pick the Wrong Men? ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="6.png"/><span>Why Do I Pick the Wrong Men?</span></a><a aria-label="Open Why You Keep Choosing the Wrong People" class="cover-tile" href="https://cornelius-aurelius.github.io/WHY-YOU-KEEP-CHOOSING-THE-WRONG-PEOPLE/" rel="noopener" target="_blank"><img alt="Why You Keep Choosing the Wrong People ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_29 PM.png"/><span>Why You Keep Choosing the Wrong People</span></a><a aria-label="Open The Imagination Book" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-IMAGINATION-BOOK/" rel="noopener" target="_blank"><img alt="The Imagination Book ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ebook covers (1).png"/><span>The Imagination Book</span></a><a aria-label="Open Become Worth Paying" class="cover-tile" href="https://cornelius-aurelius.github.io/Become-Worth-Paying/" rel="noopener" target="_blank"><img alt="Become Worth Paying ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_33 PM.png"/><span>Become Worth Paying</span></a><a aria-label="Open The Continuation Code" class="cover-tile" href="https://cornelius-aurelius.github.io/The-Continuation-Code/" rel="noopener" target="_blank"><img alt="The Continuation Code ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_32 PM.png"/><span>The Continuation Code</span></a><a aria-label="Open Take What You Want" class="cover-tile" href="https://cornelius-aurelius.github.io/Take-What-You-Want/" rel="noopener" target="_blank"><img alt="Take What You Want ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_35 PM.png"/><span>Take What You Want</span></a><a aria-label="Open The Un-Psychologist" class="cover-tile" href="https://cornelius-aurelius.github.io/The-Un-Psychologist-Psychology-Without-Permission/#top" rel="noopener" target="_blank"><img alt="The Un-Psychologist ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_31 PM.png"/><span>The Un-Psychologist</span></a><a aria-label="Open The Numb Achiever" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-NUMB-ACHIEVER-EBOOK/#top" rel="noopener" target="_blank"><img alt="The Numb Achiever ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_28 PM.png"/><span>The Numb Achiever</span></a><a aria-label="Open The Invisible Tax" class="cover-tile" href="https://cornelius-aurelius.github.io/The-Invisible-Tax-Ebook/#top" rel="noopener" target="_blank"><img alt="The Invisible Tax ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_49_17 PM.png"/><span>The Invisible Tax</span></a><a aria-label="Open Hard to Replace" class="cover-tile" href="https://cornelius-aurelius.github.io/HARD-TO-REPLACE-How-to-Stay-Valuable-Multiply-Your-Output-and-Win-in-the-Age-of-AI/#top" rel="noopener" target="_blank"><img alt="Hard to Replace ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="4.png"/><span>Hard to Replace</span></a><a aria-label="Open Just Get Skills" class="cover-tile" href="https://cornelius-aurelius.github.io/JUST-GET-SKILLS-EBOOK/#top" rel="noopener" target="_blank"><img alt="Just Get Skills ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="2.png"/><span>Just Get Skills</span></a><a aria-label="Open Rich Yin Poor Yang" class="cover-tile" href="https://cornelius-aurelius.github.io/RICH-YIN-POOR-YANG-EBOOK/#top" rel="noopener" target="_blank"><img alt="Rich Yin Poor Yang ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="5.png"/><span>Rich Yin Poor Yang</span></a><a aria-label="Open Zero to One" class="cover-tile" href="https://cornelius-aurelius.github.io/ZERO-TO-ONE-EBOOK/#top" rel="noopener" target="_blank"><img alt="Zero to One ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_36 PM.png"/><span>Zero to One</span></a><a aria-label="Open The Identity Paradox" class="cover-tile" href="https://cornelius-aurelius.github.io/THE-IDENTITY-PARADOX-EBOOK/#top" rel="noopener" target="_blank"><img alt="The Identity Paradox ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 03_41_40 PM.png"/><span>The Identity Paradox</span></a></div></div></section><section aria-labelledby="library-title" id="library">
 <div class="shell">
 <div class="section-head">
 <div>
@@ -1161,8 +1163,8 @@
 <button class="action-btn copy-caption" data-caption="Your imagination is not decoration. It is the place where your next life rehearses before it becomes real." type="button">Copy Line</button>
 </div>
 </article>
-<article class="ebook-card" data-category="Money &amp; Value" data-index="7" data-tags="money value work career skills business worth paid income" data-title="Become Worth Paying">
-<div class="ebook-top"><span class="tag">Money &amp; Value</span><span class="number">07</span></div>
+<article class="ebook-card has-cover" data-category="Money &amp; Value" data-index="7" data-tags="money value work career skills business worth paid income" data-title="Become Worth Paying">
+<div class="ebook-top"><span class="tag">Money &amp; Value</span><span class="number">07</span></div><a aria-label="Open Become Worth Paying" class="cover-link" href="https://cornelius-aurelius.github.io/Become-Worth-Paying/" rel="noopener" target="_blank"><img alt="Become Worth Paying ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_33 PM.png"/></a>
 <h3>Become Worth Paying</h3>
 <p>An ebook about value, usefulness and becoming the kind of person whose skills, output and judgement are easier to trust and pay for.</p>
 <div class="ebook-meta"><span class="mini">Value</span><span class="mini">Work</span><span class="mini">Income</span></div>
@@ -1185,8 +1187,8 @@
 <button class="action-btn copy-caption" data-caption="Most people do not lose because they never start. They lose because they do not know how to continue." type="button">Copy Line</button>
 </div>
 </article>
-<article class="ebook-card" data-category="Personal Power" data-index="9" data-tags="personal power desire agency courage choices action ambition" data-title="Take What You Want">
-<div class="ebook-top"><span class="tag">Personal Power</span><span class="number">09</span></div>
+<article class="ebook-card has-cover" data-category="Personal Power" data-index="9" data-tags="personal power desire agency courage choices action ambition" data-title="Take What You Want">
+<div class="ebook-top"><span class="tag">Personal Power</span><span class="number">09</span></div><a aria-label="Open Take What You Want" class="cover-link" href="https://cornelius-aurelius.github.io/Take-What-You-Want/" rel="noopener" target="_blank"><img alt="Take What You Want ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_35 PM.png"/></a>
 <h3>Take What You Want</h3>
 <p>A bold ebook about desire, agency and refusing to build a life entirely around permission, hesitation or quiet resentment.</p>
 <div class="ebook-meta"><span class="mini">Agency</span><span class="mini">Desire</span><span class="mini">Action</span></div>
@@ -1197,8 +1199,8 @@
 <button class="action-btn copy-caption" data-caption="A life built only around permission can become a quiet prison. Take what you want — with standards, courage and responsibility." type="button">Copy Line</button>
 </div>
 </article>
-<article class="ebook-card" data-category="Psychology" data-index="10" data-tags="psychology behaviour self understanding permission mind human patterns" data-title="The Un-Psychologist">
-<div class="ebook-top"><span class="tag">Psychology</span><span class="number">10</span></div>
+<article class="ebook-card has-cover" data-category="Psychology" data-index="10" data-tags="psychology behaviour self understanding permission mind human patterns" data-title="The Un-Psychologist">
+<div class="ebook-top"><span class="tag">Psychology</span><span class="number">10</span></div><a aria-label="Open The Un-Psychologist" class="cover-link" href="https://cornelius-aurelius.github.io/The-Un-Psychologist-Psychology-Without-Permission/#top" rel="noopener" target="_blank"><img alt="The Un-Psychologist ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_31 PM.png"/></a>
 <h3>The Un-Psychologist</h3>
 <p>Psychology without permission: a practical, human-readable ebook for noticing behaviour, motives, stories and inner patterns more clearly.</p>
 <div class="ebook-meta"><span class="mini">Behaviour</span><span class="mini">Mind</span><span class="mini">Patterns</span></div>
@@ -1209,8 +1211,8 @@
 <button class="action-btn copy-caption" data-caption="You do not need permission to become more observant. The Un-Psychologist is about seeing patterns more clearly." type="button">Copy Line</button>
 </div>
 </article>
-<article class="ebook-card" data-category="Psychology" data-index="11" data-tags="numb achiever success burnout emotions achievement psychology high performer" data-title="The Numb Achiever">
-<div class="ebook-top"><span class="tag">Psychology</span><span class="number">11</span></div>
+<article class="ebook-card has-cover" data-category="Psychology" data-index="11" data-tags="numb achiever success burnout emotions achievement psychology high performer" data-title="The Numb Achiever">
+<div class="ebook-top"><span class="tag">Psychology</span><span class="number">11</span></div><a aria-label="Open The Numb Achiever" class="cover-link" href="https://cornelius-aurelius.github.io/THE-NUMB-ACHIEVER-EBOOK/#top" rel="noopener" target="_blank"><img alt="The Numb Achiever ebook cover by Cornelius Aurelius" decoding="async" loading="lazy" src="ChatGPT Image May 9, 2026, 04_16_28 PM.png"/></a>
 <h3>The Numb Achiever</h3>
 <p>An ebook for high-functioning people who keep performing, producing and achieving while feeling strangely distant from the life they built.</p>
 <div class="ebook-meta"><span class="mini">Achievement</span><span class="mini">Burnout</span><span class="mini">Feeling</span></div>
