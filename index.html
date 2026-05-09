@@ -15,10 +15,13 @@
   <meta property="og:description" content="A clean hub for every Cornelius Aurelius ebook: football, psychology, relationships, AI-era skills, money, imagination, self-alignment and personal power." />
   <meta property="og:url" content="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOKS/" />
   <meta property="og:site_name" content="Cornelius Aurelius Ebook Library" />
+  <meta property="og:image" content="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOKS/3.png" />
+  <meta property="og:image:alt" content="Cornelius Aurelius ebook library book covers" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cornelius Aurelius Ebook Library" />
   <meta name="twitter:description" content="Read every Cornelius Aurelius ebook from one clean mobile and desktop library." />
+  <meta name="twitter:image" content="https://cornelius-aurelius.github.io/CORNELIUS-AURELIUS-EBOOKS/3.png" />
 
   <title>Cornelius Aurelius Ebook Library | Official Reading Hub</title>
 
@@ -525,6 +528,147 @@
       box-shadow: 0 24px 80px rgba(14, 165, 233, 0.12);
     }
 
+
+
+    .cover-link {
+      position: relative;
+      display: block;
+      margin: -0.25rem -0.25rem 0.95rem;
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 647 / 1000;
+      min-height: 300px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.92));
+      border: 1px solid rgba(125, 211, 252, 0.2);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+      isolation: isolate;
+    }
+
+    .cover-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(2, 6, 23, 0.48));
+      opacity: 0;
+      transition: opacity 180ms ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cover-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 220ms ease, filter 220ms ease;
+      transform: scale(1.001);
+    }
+
+    .cover-link:hover img,
+    .cover-link:focus-visible img {
+      transform: scale(1.028);
+      filter: saturate(1.08) contrast(1.04);
+    }
+
+    .cover-link:hover::after,
+    .cover-link:focus-visible::after {
+      opacity: 1;
+    }
+
+    .cover-label {
+      position: absolute;
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      z-index: 2;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 38px;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(2, 6, 23, 0.78);
+      border: 1px solid rgba(125, 211, 252, 0.34);
+      color: #eef6ff;
+      font-size: 0.78rem;
+      font-weight: 1000;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 180ms ease, transform 180ms ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .cover-link:hover .cover-label,
+    .cover-link:focus-visible .cover-label {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cover-showcase {
+      padding: 1.2rem 0 0.2rem;
+    }
+
+    .cover-strip {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+
+    .cover-tile {
+      display: block;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      background: rgba(15, 23, 42, 0.6);
+      box-shadow: 0 18px 54px rgba(0,0,0,0.24);
+      transition: transform 180ms ease, border-color 180ms ease;
+    }
+
+    .cover-tile:hover,
+    .cover-tile:focus-visible {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.62);
+      outline: none;
+    }
+
+    .cover-tile img {
+      width: 100%;
+      aspect-ratio: 647 / 1000;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cover-tile span {
+      display: block;
+      padding: 0.7rem 0.72rem 0.78rem;
+      color: var(--text);
+      font-weight: 950;
+      font-size: 0.8rem;
+      line-height: 1.15;
+      background: rgba(2, 6, 23, 0.72);
+      min-height: 52px;
+    }
+
+    body.light-mode .cover-tile span {
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    @media (max-width: 980px) {
+      .cover-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .cover-link { min-height: 320px; }
+    }
+
+    @media (max-width: 720px) {
+      .cover-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; }
+      .cover-link { min-height: 280px; border-radius: 21px; }
+      .cover-tile { border-radius: 17px; }
+      .cover-tile span { font-size: 0.76rem; min-height: 48px; }
+    }
+
     .ebook-top {
       display: flex;
       justify-content: space-between;
@@ -935,6 +1079,28 @@
       </div>
     </section>
 
+
+
+    <section class="cover-showcase" aria-labelledby="cover-showcase-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <h2 id="cover-showcase-title">Featured covers</h2>
+            <p>Tap a cover to open the correct Cornelius Aurelius ebook.</p>
+          </div>
+          <a class="pill-link" href="#library">Browse all ebooks</a>
+        </div>
+        <div class="cover-strip" aria-label="Featured ebook covers">
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top" target="_blank" rel="noopener" aria-label="Open The Flow State Footballer"><img src="1.png" alt="The Flow State Footballer cover" loading="lazy"><span>The Flow State Footballer</span></a>
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/JUST-GET-SKILLS-EBOOK/#top" target="_blank" rel="noopener" aria-label="Open Just Get Skills"><img src="2.png" alt="Just Get Skills cover" loading="lazy"><span>Just Get Skills</span></a>
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/" target="_blank" rel="noopener" aria-label="Open Colour Blindness in Football"><img src="3.png" alt="Colour Blindness in Football cover" loading="lazy"><span>Colour Blindness in Football</span></a>
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/HARD-TO-REPLACE-How-to-Stay-Valuable-Multiply-Your-Output-and-Win-in-the-Age-of-AI/#top" target="_blank" rel="noopener" aria-label="Open Hard to Replace"><img src="4.png" alt="Hard to Replace cover" loading="lazy"><span>Hard to Replace</span></a>
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/RICH-YIN-POOR-YANG-EBOOK/#top" target="_blank" rel="noopener" aria-label="Open Rich Yin Poor Yang"><img src="5.png" alt="Rich Yin Poor Yang cover" loading="lazy"><span>Rich Yin Poor Yang</span></a>
+          <a class="cover-tile" href="https://cornelius-aurelius.github.io/Why-Do-I-Pick-the-Wrong-Men_-Written-by-an-Attractive-Narcissist/" target="_blank" rel="noopener" aria-label="Open Why Do I Pick the Wrong Men? Written by an Attractive Narcissist"><img src="6.png" alt="Why Do I Pick the Wrong Men? Written by an Attractive Narcissist cover" loading="lazy"><span>Why Do I Pick the Wrong Men?</span></a>
+        </div>
+      </div>
+    </section>
+
     <section id="library" aria-labelledby="library-title">
       <div class="shell">
         <div class="section-head">
@@ -973,6 +1139,7 @@
 
         <div class="grid" id="ebookGrid">
           <article class="ebook-card" data-title="Colour Blindness in Football" data-category="Football" data-tags="football colour blindness players parents coaches sport accessibility kit clarity" data-index="1">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/COLOUR-BLINDNESS-IN-FOOTBALL/" target="_blank" rel="noopener" aria-label="Open Colour Blindness in Football"><img src="3.png" alt="Colour Blindness in Football cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Football</span><span class="number">01</span></div>
             <h3>Colour Blindness in Football</h3>
             <p>A practical awareness book for players, parents, coaches and clubs who want the game to reveal ability instead of hiding it behind avoidable visual confusion.</p>
@@ -999,6 +1166,7 @@
           </article>
 
           <article class="ebook-card" data-title="The Flow State Footballer" data-category="Football" data-tags="football flow state performance focus sport player psychology" data-index="3">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/THE-FLOW-STATE-FOOTBALLER/#top" target="_blank" rel="noopener" aria-label="Open The Flow State Footballer"><img src="1.png" alt="The Flow State Footballer cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Football</span><span class="number">03</span></div>
             <h3>The Flow State Footballer</h3>
             <p>A performance-focused ebook for footballers who want less hesitation, more presence and a stronger connection between training, instinct and match-day execution.</p>
@@ -1012,6 +1180,7 @@
           </article>
 
           <article class="ebook-card" data-title="Why Do I Pick the Wrong Men?" data-category="Relationships" data-tags="relationships dating wrong men narcissist attraction patterns self awareness" data-index="4">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/Why-Do-I-Pick-the-Wrong-Men_-Written-by-an-Attractive-Narcissist/" target="_blank" rel="noopener" aria-label="Open Why Do I Pick the Wrong Men? Written by an Attractive Narcissist"><img src="6.png" alt="Why Do I Pick the Wrong Men? Written by an Attractive Narcissist cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Relationships</span><span class="number">04</span></div>
             <h3>Why Do I Pick the Wrong Men?</h3>
             <p>A relationship-pattern ebook for readers who want to understand attraction, blind spots, repeating cycles and the cost of mistaking intensity for compatibility.</p>
@@ -1168,6 +1337,7 @@
           </article>
 
           <article class="ebook-card" data-title="Hard to Replace" data-category="Skills & AI" data-tags="hard to replace AI skills valuable output career artificial intelligence leverage" data-index="16">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/HARD-TO-REPLACE-How-to-Stay-Valuable-Multiply-Your-Output-and-Win-in-the-Age-of-AI/#top" target="_blank" rel="noopener" aria-label="Open Hard to Replace"><img src="4.png" alt="Hard to Replace cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Skills & AI</span><span class="number">16</span></div>
             <h3>Hard to Replace</h3>
             <p>How to stay valuable, multiply your output and win in the age of AI — a guide for becoming harder to ignore, automate or replace.</p>
@@ -1181,6 +1351,7 @@
           </article>
 
           <article class="ebook-card" data-title="Just Get Skills" data-category="Skills & AI" data-tags="skills learning career money value competence just get skills" data-index="17">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/JUST-GET-SKILLS-EBOOK/#top" target="_blank" rel="noopener" aria-label="Open Just Get Skills"><img src="2.png" alt="Just Get Skills cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Skills & AI</span><span class="number">17</span></div>
             <h3>Just Get Skills</h3>
             <p>A direct ebook about competence, learning, value and the practical power of building skills instead of waiting for perfect conditions.</p>
@@ -1194,6 +1365,7 @@
           </article>
 
           <article class="ebook-card" data-title="Rich Yin Poor Yang" data-category="Money & Value" data-tags="money wealth rich poor yin yang value finance mindset balance" data-index="18">
+            <a class="cover-link" href="https://cornelius-aurelius.github.io/RICH-YIN-POOR-YANG-EBOOK/#top" target="_blank" rel="noopener" aria-label="Open Rich Yin Poor Yang"><img src="5.png" alt="Rich Yin Poor Yang cover" loading="lazy"><span class="cover-label">Open ebook</span></a>
             <div class="ebook-top"><span class="tag">Money & Value</span><span class="number">18</span></div>
             <h3>Rich Yin Poor Yang</h3>
             <p>An ebook about wealth, contrast, behaviour and the hidden forces that shape how people earn, think, keep, lose and relate to money.</p>
